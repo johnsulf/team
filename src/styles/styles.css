@@ -107,3 +107,44 @@
   --color-team-light: #2ca4ea;
   --color-team-gold: #fccf34;
 }
+
+/* Clarendon font for headers */
+@font-face {
+  font-family: 'Clarendon';
+  src: url('/fonts/Clarendon-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Clarendon', 'Rockwell', 'Courier Bold', 'Georgia', serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
