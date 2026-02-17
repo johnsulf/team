@@ -17,126 +17,129 @@ public/          # Static files (favicons)
 
 ## Commands
 
-| Command           | Purpose                              |
-|-------------------|--------------------------------------|
-| `npm run dev`     | Dev server at `localhost:4321`       |
-| `npm run build`   | Build to `./dist/`                   |
-| `npm run preview` | Preview production build             |
+| Command           | Purpose                        |
+| ----------------- | ------------------------------ |
+| `npm run dev`     | Dev server at `localhost:4321` |
+| `npm run build`   | Build to `./dist/`             |
+| `npm run preview` | Preview production build       |
 
 ---
 
-## Setup Guide: Formatting, Linting & Pre-commit Hooks
+## Setup Guide: Tailwind CSS & Theming
 
-### 1. Prettier (Formatting)
+### 1. Install Tailwind
 
 ```bash
-npm install -D prettier prettier-plugin-astro
+npx astro add tailwind
 ```
 
-Create `prettier.config.mjs`:
+This automatically:
+
+- Installs `tailwindcss` and `@astrojs/tailwind`
+- Creates `tailwind.config.mjs`
+- Updates `astro.config.mjs`
+
+### 2. Define Theme Colors
+
+Edit `tailwind.config.mjs`:
+
 ```js
 export default {
-  plugins: ['prettier-plugin-astro'],
-  overrides: [
-    {
-      files: '*.astro',
-      options: { parser: 'astro' },
-    },
-  ],
-  semi: true,
-  singleQuote: true,
-  tabWidth: 2,
-  trailingComma: 'es5',
-};
-```
-
-Add to `package.json` scripts:
-```json
-"format": "prettier --write .",
-"format:check": "prettier --check ."
-```
-
-### 2. ESLint (Linting)
-
-```bash
-npm install -D eslint eslint-plugin-astro @typescript-eslint/parser
-```
-
-Create `eslint.config.mjs`:
-```js
-import eslintPluginAstro from 'eslint-plugin-astro';
-import tsParser from '@typescript-eslint/parser';
-
-export default [
-  ...eslintPluginAstro.configs.recommended,
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        project: './tsconfig.json',
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          // ... generate full palette
+          500: '#22c55e', // main brand color
+          600: '#16a34a',
+          700: '#15803d',
+        },
+        secondary: {
+          // secondary palette
+        },
       },
     },
   },
-  {
-    ignores: ['dist/', '.astro/', 'node_modules/'],
+};
+```
+
+**Tip:** Use [Tailwind CSS Color Generator](https://uicolors.app/create) or [Coolors](https://coolors.co/) to generate full color palettes from a single hex value.
+
+### 3. Component Library Options for Astro
+
+| Library                                 | Description                               | Best For                     |
+| --------------------------------------- | ----------------------------------------- | ---------------------------- |
+| **[daisyUI](https://daisyui.com/)**     | Tailwind plugin with pre-built components | Quick prototyping, themeable |
+| **[shadcn/ui](https://ui.shadcn.com/)** | Copy-paste components (React)             | Full control, modern design  |
+| **[Preline](https://preline.co/)**      | Tailwind components with JS               | No framework dependency      |
+| **[Flowbite](https://flowbite.com/)**   | Tailwind component library                | Comprehensive, good docs     |
+
+**Recommended for pure Astro:** daisyUI or Preline (no React needed)
+
+#### daisyUI Setup
+
+```bash
+npm install -D daisyui
+```
+
+Add to `tailwind.config.mjs`:
+
+```js
+import daisyui from 'daisyui';
+
+export default {
+  // ...
+  plugins: [daisyui],
+  daisyui: {
+    themes: [
+      {
+        team: {
+          primary: '#22c55e',
+          secondary: '#3b82f6',
+          accent: '#f59e0b',
+          neutral: '#1f2937',
+          'base-100': '#ffffff',
+        },
+      },
+    ],
   },
-];
+};
 ```
 
-Add to `package.json` scripts:
-```json
-"lint": "eslint .",
-"lint:fix": "eslint . --fix"
-```
-
-### 3. Pre-commit Hooks (Husky + lint-staged)
+#### Preline Setup (Alternative)
 
 ```bash
-npm install -D husky lint-staged
-npx husky init
+npm install preline
 ```
 
-This creates `.husky/` directory. Edit `.husky/pre-commit`:
-```bash
-npx lint-staged
+Add to Layout.astro:
+
+```astro
+<script>
+  import 'preline/preline';
+</script>
 ```
 
-Add to `package.json`:
-```json
-"lint-staged": {
-  "*.{js,ts,astro}": ["eslint --fix", "prettier --write"],
-  "*.{json,md,css}": ["prettier --write"]
+### 4. CSS Custom Properties (Alternative to Tailwind themes)
+
+Create `src/styles/theme.css`:
+
+```css
+:root {
+  --color-primary: #22c55e;
+  --color-primary-dark: #15803d;
+  --color-secondary: #3b82f6;
 }
 ```
 
-### 4. VS Code Integration (Optional)
+Import in Layout.astro and use in Tailwind:
 
-Create `.vscode/settings.json`:
-```json
-{
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
-  },
-  "eslint.validate": ["javascript", "typescript", "astro"]
+```js
+// tailwind.config.mjs
+colors: {
+  primary: 'var(--color-primary)',
 }
-```
-
-Recommended extensions:
-- `astro-build.astro-vscode`
-- `esbenp.prettier-vscode`
-- `dbaeumer.vscode-eslint`
-
-### Quick Start Summary
-
-```bash
-# Install all at once
-npm install -D prettier prettier-plugin-astro eslint eslint-plugin-astro @typescript-eslint/parser husky lint-staged
-
-# Initialize husky
-npx husky init
-
-# Then create config files as shown above
 ```
