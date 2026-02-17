@@ -122,8 +122,10 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--color-team-gold);
   font-family: 'Clarendon', 'Rockwell', 'Courier Bold', 'Georgia', serif;
   font-weight: 700;
+  text-shadow: 2px 2px 0 var(--color-team-dark);
 }
 
 h1 {
