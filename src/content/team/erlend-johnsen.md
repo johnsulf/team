@@ -1,6 +1,7 @@
 ---
 name: Erlend Johnsen
 role: Spiller
+image: ../../assets/team/erlend.jpg
 order: 4
 ---
 

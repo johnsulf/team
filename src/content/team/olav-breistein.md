@@ -1,6 +1,7 @@
 ---
 name: Olav Breistein
 role: Spiller
+image: ../../assets/team/olav.jpg
 order: 2
 ---
 

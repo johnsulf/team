@@ -1,6 +1,7 @@
 ---
 name: Michael White
 role: Spiller
+image: ../../assets/team/michael.jpg
 order: 3
 ---
 

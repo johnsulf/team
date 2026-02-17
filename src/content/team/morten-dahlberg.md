@@ -1,6 +1,7 @@
 ---
 name: Morten Dahlberg
 role: Teamleder, Arrangør
+image: ../../assets/team/morten.jpg
 order: 1
 ---
 
