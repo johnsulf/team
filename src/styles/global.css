@@ -1,1 +1,15 @@
 @import 'tailwindcss';
+@plugin "daisyui";
+
+@theme {
+  /* Team colors */
+  --color-primary: #004371; /* Dark blue */
+  --color-secondary: #2ca4ea; /* Light blue */
+  --color-accent: #fccf34; /* Yellow/gold */
+
+  /* Extended palette (optional) */
+  --color-primary-light: #0a5a94;
+  --color-primary-dark: #002d4d;
+  --color-secondary-light: #5bbdf0;
+  --color-secondary-dark: #1b7bb8;
+}
