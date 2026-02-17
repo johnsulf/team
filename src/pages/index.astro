@@ -4,7 +4,6 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/components/Footer.astro';
 import Header from '../layouts/components/Header.astro';
 import logo from '../assets/logo.svg';
-const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -25,12 +24,8 @@ const base = import.meta.env.BASE_URL;
           <h1>Team Bergen Diskgolf</h1>
           <p class="py-6 text-lg">Mer enn bare en runde.</p>
           <div class="flex gap-4 justify-center">
-            <a href={`${base}/team`} class="btn btn-primary btn-lg"
-              >Møt teamet</a
-            >
-            <a href={`${base}/kontakt`} class="btn btn-outline btn-lg"
-              >Kontakt oss</a
-            >
+            <a href="/team" class="btn btn-primary btn-lg">Møt teamet</a>
+            <a href="/kontakt" class="btn btn-outline btn-lg">Kontakt oss</a>
           </div>
         </div>
       </div>
