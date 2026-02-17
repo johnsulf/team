@@ -1,9 +1,9 @@
 ---
 name: Morten Dahlberg
-role: Team Leder, Arrangør
+role: Teamleder, Arrangør
 order: 1
 ---
 
-Morten er en jovial kar som gjør ekstremt mye for disc golf på Vestlandet. Han er en synlig figur gjennom sin arrangørrolle i flere store vestlandsturneringer. Han har blant annet arrangert Vestkysttouren 2025, Bergen Disc Golf Marathon og halloween-turneringer med glødende discer.
+Morten er en engasjert og jovial kar som legger ned enormt mye arbeid for diskgolf på Vestlandet. Han er en sentral figur i miljøet gjennom sin rolle som arrangør av flere store vestlandsturneringer som Vestkysttouren 2025, Bergen Diskgolf Marathon og stemningsfulle halloween-turneringer med glødende discer.
 
-Morten vil legge til rette for at spillere i Bergen og omegn skal kunne hevde seg i norgestoppen, og har derfor opprettet Team Bergen Disc Golf.
+Med et ønske om å løfte spillere i Bergen og omegn til norgestoppen, tok Morten initiativet til å opprette Team Bergen Diskgolf.
