@@ -7,7 +7,6 @@
 
 @plugin "daisyui/theme" {
   name: 'team';
-  default: true;
   color-scheme: light;
 
   /* Brand colors */
