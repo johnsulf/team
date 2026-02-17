@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../layouts/components/Footer.astro';
+import Header from '../layouts/components/Header.astro';
+---
+
+<Layout title="Om oss | Bergen Diskgolf">
+  <Header />
+  <main class="grow">
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-center mb-12">Om oss</h1>
+
+        <div class="prose prose-lg mx-auto mb-12">
+          <p class="text-xl text-center">
+            Vi er en gjeng diskgolf-entusiaster fra Bergen og omegn som vil litt
+            mer med sporten vår.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <div class="text-4xl mb-4">🤝</div>
+              <h3 class="card-title">Inkluderende miljø</h3>
+              <p>
+                Vi vil skape et stort og inkluderende miljø der alle er velkomne
+                – uansett nivå. Samtidig gir vi mulighet for de som vil satse og
+                utvikle seg videre.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <div class="text-4xl mb-4">🥏</div>
+              <h3 class="card-title">Vekst på Vestlandet</h3>
+              <p>
+                Vi vil gjøre diskgolf så stort som mulig på Vestlandet. Vi
+                jobber for å spre kjennskap til sporten og bygge et sterkt
+                fellesskap i regionen.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="/team" class="btn btn-primary btn-lg">Møt teamet</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

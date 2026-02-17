@@ -14,15 +14,15 @@ Astro 5.x landing page for a disc golf team from Bergen. TypeScript strict mode 
 
 ### Terminologi
 
-| Bruk ✓     | Ikke bruk ✗      |
-| ---------- | ---------------- |
-| diskgolf   | disc golf        |
-| lag / team | squad            |
-| trening    | practice session |
-| bane       | course           |
-| turnering  | tournament       |
-| runde      | round            |
-| kast       | throw            |
+| Bruk ✓    | Ikke bruk ✗      |
+| --------- | ---------------- |
+| diskgolf  | disc golf        |
+| team      | squad/lag        |
+| trening   | practice session |
+| bane      | course           |
+| turnering | tournament       |
+| runde     | round            |
+| kast      | throw            |
 
 ### Tone og stil
 
