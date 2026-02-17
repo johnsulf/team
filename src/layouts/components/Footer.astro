@@ -1,10 +1,14 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <footer
   class="footer footer-horizontal footer-center bg-base-200 text-base-content p-10"
 >
   <nav class="grid grid-flow-col gap-4">
-    <a href="/om-oss" class="link link-hover">Om oss</a>
-    <a href="/team" class="link link-hover">Teamet</a>
-    <a href="/kontakt" class="link link-hover">Kontakt</a>
+    <a href={`${base}om-oss`} class="link link-hover">Om oss</a>
+    <a href={`${base}team`} class="link link-hover">Teamet</a>
+    <a href={`${base}kontakt`} class="link link-hover">Kontakt</a>
   </nav>
   <nav class="grid grid-flow-col gap-4">
     <a

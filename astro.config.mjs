@@ -8,6 +8,6 @@ export default defineConfig({
   site: 'https://erlendjohnsen.github.io',
   base: '/team',
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });
