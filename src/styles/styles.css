@@ -111,7 +111,7 @@
 /* Clarendon font for headers */
 @font-face {
   font-family: 'Clarendon';
-  src: url('/fonts/Clarendon-Bold.woff') format('woff');
+  src: url('/team/fonts/Clarendon-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -160,4 +160,13 @@ p {
 
 .team-image:hover {
   filter: sepia(0) saturate(1) hue-rotate(0deg) contrast(1) brightness(1);
+}
+
+/* Logo - adjusts for dark/light mode */
+.logo-adaptive {
+  transition: filter 0.3s ease;
+}
+
+[data-theme='team-dark'] .logo-adaptive {
+  filter: invert(1);
 }
