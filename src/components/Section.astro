@@ -1,0 +1,33 @@
+---
+interface Props {
+  id?: string;
+  variant?: 'default' | 'alt' | 'primary' | 'accent';
+  narrow?: boolean;
+  class?: string;
+}
+
+const {
+  id,
+  variant = 'default',
+  narrow = false,
+  class: className,
+} = Astro.props;
+
+const bgClasses = {
+  default: 'bg-base-100',
+  alt: 'bg-base-200 bg-noise',
+  primary: 'bg-primary text-primary-content',
+  accent: 'bg-accent text-accent-content',
+};
+
+const containerWidth = narrow ? 'max-w-3xl' : 'max-w-6xl';
+---
+
+<section
+  id={id}
+  class:list={['section-padding', bgClasses[variant], className]}
+>
+  <div class={`container mx-auto px-4 sm:px-6 lg:px-8 ${containerWidth}`}>
+    <slot />
+  </div>
+</section>
