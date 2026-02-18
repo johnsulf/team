@@ -122,8 +122,8 @@ h6 {
 h1 {
   color: var(--color-team-gold);
   text-shadow: 2px 2px 0 var(--color-team-dark);
-  font-size: 4rem;
-  line-height: 4.5rem;
+  font-size: clamp(2rem, 8vw, 4rem);
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
