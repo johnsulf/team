@@ -111,7 +111,7 @@
 /* Clarendon font for headers */
 @font-face {
   font-family: 'Clarendon';
-  src: url('/team/fonts/Clarendon-Bold.woff') format('woff');
+  src: url('/fonts/Clarendon-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
