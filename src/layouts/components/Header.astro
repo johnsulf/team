@@ -1,11 +1,21 @@
 ---
+import { Image } from 'astro:assets';
 import ThemeToggle from '../../components/ThemeToggle.astro';
+import image from '../../assets/header.png';
 ---
 
 <header class="bg-base-200">
   <nav class="navbar max-w-7xl mx-auto">
     <div class="navbar-start">
-      <a href="/" class="font-bold text-primary font-header"> TEAM BERGEN? </a>
+      <a href="/" class="font-bold text-primary">
+        <Image
+          src={image}
+          alt="Team Bergen? logo"
+          width={40}
+          height={40}
+          class="object-contain"
+        />
+      </a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
