@@ -63,7 +63,19 @@ const renderedMembers = await Promise.all(
                 </figure>
                 <div class="card-body md:w-2/3">
                   <h2 class="card-title text-2xl">{data.name}</h2>
-                  <p class="badge badge-primary">{data.role}</p>
+                  <div class="flex gap-2 flex-wrap">
+                    <span class="badge badge-primary">{data.role}</span>
+                    {data.pdga && (
+                      <a
+                        href={`https://www.pdga.com/player/${data.pdga}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="badge badge-outline hover:badge-secondary"
+                      >
+                        #{data.pdga}
+                      </a>
+                    )}
+                  </div>
                   <div class="prose">
                     <Content />
                   </div>

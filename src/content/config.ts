@@ -7,6 +7,7 @@ const team = defineCollection({
       name: z.string(),
       role: z.string(),
       image: image().optional(),
+      pdga: z.number().optional(),
       order: z.number().default(999), // For sorting - lower number = higher in list
     }),
 });

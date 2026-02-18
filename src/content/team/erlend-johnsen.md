@@ -2,6 +2,7 @@
 name: Erlend Johnsen
 role: Spiller
 image: ../../assets/team/erlend.jpg
+pdga: 94422
 order: 4
 ---
 

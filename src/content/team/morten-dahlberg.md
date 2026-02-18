@@ -2,6 +2,7 @@
 name: Morten Dahlberg
 role: Teamleder, Arrangør
 image: ../../assets/team/morten.jpg
+pdga: 222425
 order: 1
 ---
 
