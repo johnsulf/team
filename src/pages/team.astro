@@ -29,8 +29,11 @@ const renderedMembers = await Promise.all(
 
         <div class="grid gap-8 max-w-4xl mx-auto">
           {
-            renderedMembers.map(({ data, Content }) => (
-              <div class="card card-side bg-base-200  flex-col md:flex-row md:items-center">
+            renderedMembers.map(({ slug, data, Content }) => (
+              <div
+                id={slug}
+                class="card card-side bg-base-200  flex-col md:flex-row md:items-center scroll-mt-24"
+              >
                 <figure class="md:w-1/3 p-6 shrink-0">
                   {data.image ? (
                     <div class="aspect-square w-full overflow-hidden rounded-xl">

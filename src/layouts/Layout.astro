@@ -81,7 +81,7 @@ const structuredData = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bevan&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bevan&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -129,17 +129,6 @@ const structuredData = {
       type="application/ld+json"
       set:html={JSON.stringify(structuredData)}
     />
-
-    <script is:inline>
-      // Prevent flash of wrong theme
-      const theme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-      ).matches;
-      if (theme === 'team-dark' || (!theme && prefersDark)) {
-        document.documentElement.setAttribute('data-theme', 'team-dark');
-      }
-    </script>
   </head>
   <body
     class="bg-base-100 text-base-content min-h-screen flex flex-col overflow-x-hidden"

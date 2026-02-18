@@ -1,9 +1,11 @@
 ---
-import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/components/Footer.astro';
 import Header from '../layouts/components/Header.astro';
-import logo from '../assets/logo.svg';
+import Hero from '../components/Hero.astro';
+import ValueProps from '../components/ValueProps.astro';
+import TeamTeaser from '../components/TeamTeaser.astro';
+import SponsorTeaser from '../components/SponsorTeaser.astro';
 ---
 
 <Layout
@@ -12,29 +14,10 @@ import logo from '../assets/logo.svg';
 >
   <Header />
   <main class="grow">
-    <section class="hero min-h-[70vh] bg-base-100">
-      <div class="hero-content text-center flex-col">
-        <div class="rounded-full">
-          <Image
-            src={logo}
-            alt="Team Bergen? – diskgolfteam fra Bergen"
-            class="object-contain logo-adaptive w-48 md:w-72"
-          />
-        </div>
-        <div class="max-w-2xl">
-          <h1>Team Bergen?</h1>
-          <p class="py-6 text-lg">
-            Diskgolfteam fra Bergen og Vestlandet. Mer enn bare en runde.
-          </p>
-          <div class="flex gap-4 justify-center flex-wrap">
-            <a href="/team" class="btn btn-primary btn-lg">Møt teamet</a>
-            <a href="/kontakt#sponsor" class="btn btn-outline btn-lg"
-              >Bli sponsor</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+    <Hero />
+    <ValueProps />
+    <TeamTeaser />
+    <SponsorTeaser />
   </main>
   <Footer />
 </Layout>
