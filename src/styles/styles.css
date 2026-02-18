@@ -121,7 +121,7 @@ h6 {
 /* Hero headings - gold with shadow */
 h1 {
   color: var(--color-team-gold);
-  text-shadow: 2px 2px 0 var(--color-team-dark);
+  text-shadow: -2px -2px 0 var(--color-team-dark);
   font-size: clamp(2rem, 8vw, 4rem);
   line-height: 1.1;
   text-transform: uppercase;
@@ -182,4 +182,13 @@ p {
 
 [data-theme='team-dark'] .logo-adaptive {
   filter: invert(1);
+}
+
+.title {
+  color: var(--color-team-gold);
+  text-shadow: -1px -1px 0 var(--color-team-dark);
+  font-weight: 600;
+  font-family: 'Bevan', serif;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
