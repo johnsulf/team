@@ -1,6 +1,6 @@
-# Team Bergen Diskgolf
+# Team Bergen?
 
-Nettside for Team Bergen Diskgolf – en gjeng diskgolf-entusiaster fra Bergen og omegn.
+Nettside for Team Bergen? – en gjeng diskgolf-entusiaster fra Bergen og omegn.
 
 ## Teknologi
 

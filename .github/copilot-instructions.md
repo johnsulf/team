@@ -65,4 +65,4 @@ Bli med på trening
 - **Datoformat:** 17. februar 2026 (dag. måned år)
 - **Tall:** Skriv ut tall under 13 («tre», «tolv»), bruk siffer for større tall
 - **Bindestrek:** Bruk i sammensatte ord der det trengs for lesbarhet («diskgolf-entusiaster»)
-- **Lagets navn:** Bruk «Team Bergen Diskgolf» eller «teamet» – ikke placeholdere som «[TEAM]»
+- **Lagets navn:** Bruk «Team Bergen?» eller «teamet» – ikke placeholdere som «[TEAM]»
