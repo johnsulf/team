@@ -9,23 +9,23 @@
   name: 'team';
   color-scheme: light;
 
-  /* Brand colors */
-  --color-primary: oklch(35% 0.12 240);
-  --color-primary-content: oklch(98% 0.01 240);
-  --color-secondary: oklch(65% 0.15 220);
-  --color-secondary-content: oklch(15% 0.02 220);
-  --color-accent: oklch(85% 0.18 85);
-  --color-accent-content: oklch(20% 0.05 85);
+  /* Brand colors (Figma) */
+  --color-primary: #004371;
+  --color-primary-content: #ffffff;
+  --color-secondary: #2ca4ea;
+  --color-secondary-content: #004371;
+  --color-accent: #ffad09;
+  --color-accent-content: #004371;
 
   /* Neutral */
-  --color-neutral: oklch(30% 0.05 240);
-  --color-neutral-content: oklch(98% 0.01 240);
+  --color-neutral: #004371;
+  --color-neutral-content: #ffffff;
 
   /* Base surfaces */
-  --color-base-100: oklch(99% 0.005 240);
-  --color-base-200: oklch(96% 0.01 240);
-  --color-base-300: oklch(92% 0.015 240);
-  --color-base-content: oklch(20% 0.03 240);
+  --color-base-100: #ffffff;
+  --color-base-200: #f5f7fa;
+  --color-base-300: #e8ecf2;
+  --color-base-content: #004371;
 
   /* Semantic colors */
   --color-info: oklch(65% 0.18 230);
@@ -57,23 +57,23 @@
   prefersdark: true;
   color-scheme: dark;
 
-  /* Brand colors (same hues, adjusted for dark mode) */
-  --color-primary: oklch(55% 0.15 240);
-  --color-primary-content: oklch(98% 0.01 240);
-  --color-secondary: oklch(70% 0.15 220);
-  --color-secondary-content: oklch(15% 0.02 220);
-  --color-accent: oklch(80% 0.18 85);
-  --color-accent-content: oklch(20% 0.05 85);
+  /* Brand colors (Figma, adjusted for dark mode) */
+  --color-primary: #2ca4ea;
+  --color-primary-content: #004371;
+  --color-secondary: #ffad09;
+  --color-secondary-content: #004371;
+  --color-accent: #ffad09;
+  --color-accent-content: #004371;
 
   /* Neutral */
-  --color-neutral: oklch(25% 0.03 240);
-  --color-neutral-content: oklch(90% 0.01 240);
+  --color-neutral: #050f37;
+  --color-neutral-content: #ffffff;
 
   /* Base surfaces (dark) */
-  --color-base-100: oklch(18% 0.02 240);
-  --color-base-200: oklch(22% 0.025 240);
-  --color-base-300: oklch(26% 0.03 240);
-  --color-base-content: oklch(90% 0.01 240);
+  --color-base-100: #050f37;
+  --color-base-200: #0a1847;
+  --color-base-300: #102157;
+  --color-base-content: #ffffff;
 
   /* Semantic colors */
   --color-info: oklch(65% 0.18 230);
@@ -104,17 +104,8 @@
   /* Team colors for direct Tailwind use */
   --color-team-dark: #004371;
   --color-team-light: #2ca4ea;
-  --color-team-gold: #fccf34;
-  --font-header: 'Clarendon', 'Rockwell', 'Courier Bold', 'Georgia', serif;
-}
-
-/* Clarendon font for headers */
-@font-face {
-  font-family: 'Clarendon';
-  src: url('/fonts/Clarendon-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+  --color-team-gold: #ffad09;
+  --font-header: 'Bevan', serif;
 }
 
 h1,
@@ -123,8 +114,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Clarendon', 'Rockwell', 'Courier Bold', 'Georgia', serif;
-  font-weight: 700;
+  font-family: 'Bevan', serif;
+  font-weight: 400;
 }
 
 /* Hero headings - gold with shadow */
